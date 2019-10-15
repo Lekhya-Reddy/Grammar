@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+
+   <rule id="myRoot" scope="public">
+      <one-of>
+         <item>
+	    <ruleref uri="#FULL_PAYMENT"/>
+            <tag>
+				dm_root= SWI_meaning = 'FULL_PAYMENT'
+			</tag>
+         </item>
+         <item>
+            <ruleref uri="#DIFFERENT_AMOUNT"/>
+            <tag>dm_root=SWI_meaning = 'DIFFERENT_AMOUNT'</tag>
+         </item>
+         <item>
+            <tag>SWI_decoy = '1'</tag>payment
+         </item>
+      </one-of>
+   </rule>       
+            
+   <rule id="FULL_PAYMENT">           
+      <one-of>
+	<item>full payment</item>
+	<item weight="0.01">continue</item>
+ 	<item>full amount</item>
+ 	<item>pay full amount</item>
+	<item>pay the full amount</item>
+	
+	<item>full full payment</item>
+	<item>full payment full payment</item>
+	<item>full amount due</item>
+	<item>current payment</item>
+	<item>full pay full payment</item>
+	<item>yeah full amount</item>
+       </one-of>
+   </rule>
+   
+   <rule id="DIFFERENT_AMOUNT">
+      <one-of>
+	<item>different amount</item>
+	<item>a different amount</item>
+        <item>I want to pay a different amount</item>
+        <item>pay different amount</item>
+        <item>pay some other amount</item>
+      </one-of>
+   </rule>   
+
+</grammar>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="dtmf" root="myRoot">
+
+   <rule id="myRoot" scope="public">
+      <ruleref uri="#AGENT"/>
+      <tag>dm_command= SWI_meaning = 'AGENT'</tag>
+      <tag>dm_confirmation_mode='NEVER'</tag>
+   </rule>
+      
+   <rule id="AGENT">
+      0 
+   </rule>
+            
+</grammar>
+

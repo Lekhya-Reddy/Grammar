@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO8859-1" standalone="yes"?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.w3.org/2001/06/grammar    
+							http://www.w3.org/TR/speech-grammar/grammar.xsd" 
+		xml:lang="en-us" mode="voice" root="myRoot">
+		
+  <rule id="myRoot" scope="public">
+    <item repeat="0-1">@hes@</item>
+    <one-of>
+	  <item>
+	  	<ruleref uri="#BIN_ERROR" />
+        <tag>dm_command= SWI_meaning = 'BIN_ERROR'</tag>
+        <tag>dm_confirmation_mode='NEVER'</tag>
+	  </item>
+	  <item>
+	  	<ruleref uri="#LUHN_ERROR" />
+        <tag>dm_command= SWI_meaning = 'LUHN_ERROR'</tag>
+        <tag>dm_confirmation_mode='NEVER'</tag>
+	  </item>
+	  <item>
+	  	<ruleref uri="#NETWORK_ERROR" />
+        <tag>dm_command= SWI_meaning = 'NETWORK_ERROR'</tag>
+        <tag>dm_confirmation_mode='NEVER'</tag>
+	  </item>
+	  <item>
+	  	<ruleref uri="#PAN_LENGTH_ERROR" />
+        <tag>dm_command= SWI_meaning = 'PAN_LENGTH_ERROR'</tag>
+        <tag>dm_confirmation_mode='NEVER'</tag>
+	  </item>
+	  <item>
+	  	<ruleref uri="#PAN_START" />
+        <tag>dm_command= SWI_meaning = 'PAN_START'</tag>
+        <tag>dm_confirmation_mode='NEVER'</tag>
+	  </item>
+	  <item weight="0.1">
+      <ruleref uri="#noise_decoy"/>
+       <tag>dm_command = SWI_meaning = MEANING = 'noise_decoy'</tag>
+        <tag>SWI_decoy=1</tag>
+    </item>
+    <item weight="0.1">
+      <ruleref uri="#speech_decoy"/>
+      <tag>dm_command = SWI_meaning = MEANING = 'speech_decoy'</tag>
+      <tag>SWI_decoy=1</tag>
+    </item>
+	 </one-of>
+	</rule>
+	<rule id="BIN_ERROR">
+		<one-of>
+			<item>bin error</item>			
+		</one-of>
+	</rule>
+	<rule id="LUHN_ERROR">
+	    <one-of>
+		  <item>luhn error</item>
+	    </one-of>
+  	</rule>
+  	<rule id="NETWORK_ERROR">
+		<one-of>
+			<item>network error</item>		
+		</one-of>
+	</rule>
+	<rule id="PAN_LENGTH_ERROR">
+		<one-of>
+			<item>pan length error</item>		
+		</one-of>
+	</rule>
+    <rule id="PAN_START">
+      <one-of>  
+        <item>pan start</item>
+      </one-of>
+    </rule>  
+    <rule id="noise_decoy" scope="public">
+      <one-of>
+        <item>
+           <item repeat="1-10" repeat-prob="0.95">@reject@</item>
+        </item>
+      </one-of>
+    </rule>
+
+   <rule id="speech_decoy" scope="public">
+      <one-of>
+        <item> Lo siento </item>
+        <item> Lo </item>
+     </one-of>
+   </rule>
+</grammar>

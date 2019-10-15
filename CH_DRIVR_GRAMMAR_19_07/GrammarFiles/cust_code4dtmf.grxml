@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<grammar xml:lang="en-US" mode="dtmf" version="1.0"
+		root="_digits" tag-format="swi-semantics/1.0" 
+		xmlns="http://www.w3.org/2001/06/grammar">
+
+	<rule id="_digits" scope="public">
+		<ruleref uri="#RESPONSE" />
+		<tag>
+			var tempString = RESPONSE.SWI_literal.replace(/ /g, '')
+			MEANING=tempString.replace('#', '')
+		</tag>
+	</rule>
+
+	<rule id="RESPONSE">
+		<one-of>
+			<item>
+				<ruleref uri="#DIGIT" />
+				<ruleref uri="#DIGIT" />
+				<ruleref uri="#DIGIT" />				
+			</item>
+			
+		</one-of>
+	</rule>
+
+	<rule id="DIGIT">
+		<one-of>
+			<item>0</item>
+			<item>1</item>
+			<item>2</item>
+			<item>3</item>
+			<item>4</item>
+			<item>5</item>
+			<item>6</item>
+			<item>7</item>
+			<item>8</item>
+			<item>9</item>
+		</one-of>
+	</rule>
+</grammar>

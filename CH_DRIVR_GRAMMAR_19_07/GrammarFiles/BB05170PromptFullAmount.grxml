@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0"  xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+
+   <rule id="myRoot" scope="public">
+      <one-of>
+         <item>
+	    <ruleref uri="#CONTINUE"/>
+            <tag>dm_root= SWI_meaning = 'CONTINUE'</tag>
+         </item>
+         <item>
+            <ruleref uri="#DIFFERENT_AMOUNT"/>
+            <tag>dm_root=SWI_meaning = 'DIFFERENT_AMOUNT'</tag>
+         </item>
+         
+      </one-of>
+   </rule>      
+            
+   <rule id="CONTINUE">           
+      <one-of>
+	<item>yes</item>
+	<item>full amount</item>
+	<item>continue</item>
+    <item>im ready to pay the full amount</item>
+	<item>im ready to pay</item>
+	<item>ready to pay</item>
+	<item>yeah</item>
+	<item>yep</item>
+	<item>yes yes</item>
+	<item>yeah yes</item>
+	<item>yeah yeah</item>
+	<item><tag>SWI_scoreDelta='-400'</tag>one</item>
+	<item>yes full amount</item>
+	<item>pay the full amount</item>
+       </one-of>
+   </rule>
+   
+   <rule id="DIFFERENT_AMOUNT">
+      <one-of>
+         <item>no</item>
+	<item>different amount</item>
+        <item>I want to pay a different amout</item>
+        <item>pay some other amount</item>
+	<item><tag>SWI_scoreDelta='-400'</tag>two</item>
+	<item>no no</item>
+	<item>no no no</item>
+      </one-of>
+   </rule>   
+
+</grammar>
+

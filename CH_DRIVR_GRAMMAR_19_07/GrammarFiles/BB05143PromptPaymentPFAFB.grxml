@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+
+  <rule id="myRoot" scope="public">
+    <one-of>
+
+      <item>
+        <ruleref uri="#MAKE_PAYMENT"/>
+        <tag>dm_root=SWI_meaning = 'MAKE_PAYMENT'</tag>
+      </item>
+<item>
+        <ruleref uri="#PAYMENT_ARRANGEMENT"/>
+        <tag>dm_root=SWI_meaning = 'PAYMENT_ARRANGEMENT'</tag>
+      </item>
+
+    </one-of>
+  </rule>
+
+  <rule id="MAKE_PAYMENT">
+    <one-of>
+      <item>full payment</item>
+	  <item>pay in full</item>
+      <item>pay full Amount</item>
+      <item>make a payment</item>
+      <item>make payment</item>
+      <item>full Amount</item>
+      <item weight="0.01">payment<tag>dm_root='payment';SWI_decoy='1';</tag>
+	  <item>full pay</item>
+	  <item>full full payment</item>
+	  <item>full payment full payment</item>
+	  <item>full payments</item>
+	  <item>make full payment</item>
+	  <item weight="0.1">one</item>
+      </item>
+    </one-of>
+  </rule>
+
+
+
+ <rule id="PAYMENT_ARRANGEMENT">
+    <one-of>
+      <item>payment arrangements</item>
+      <item>payment arrangement</item>
+	  <item weight="0.1">two</item>
+	  <item>to payment arrangements</item>
+	  <item>i guess payment arrangements</item>
+	  <item>other arrangements</item>
+    </one-of>
+  </rule>
+
+</grammar>
+

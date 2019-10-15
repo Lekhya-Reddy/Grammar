@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar xml:lang="en-US" tag-format="swi-semantics/1.0" version="1.0" mode="speech" root="myRoot">
+
+      
+   <rule id="myRoot" scope="public">
+      <ruleref uri="#RESPONSE"/>
+   </rule>
+      
+   <rule id="RESPONSE">
+      <count number="1+">
+	 <ruleref uri="#NUM"/>
+	 <ruleref uri="#NUM"/>
+	 <ruleref uri="#NUM"/>
+         </count>
+   </rule>
+      
+  
+
+    
+       
+     <rule id="NUM">
+      <one-of>
+         <item>0</item>
+         <item>1</item>
+         <item>2</item>
+         <item>3</item>
+         <item>4</item>
+         <item>5</item>
+         <item>6</item>
+         <item>7</item>
+         <item>8</item>
+         <item>9</item>
+      </one-of>
+   </rule>
+
+</grammar>
+
+       
+        
+        
+            
+        
+     
+            
+        
+	 
+            
+         
+	
+            
+        
+	
+            
+         
+     
+	 
+      
+  

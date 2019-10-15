@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0"  xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+
+   <rule id="myRoot" scope="public">
+      <one-of>
+	   <item>
+            <ruleref uri="#REPEAT"/>
+            <tag>dm_root=SWI_meaning = 'REPEAT'</tag>
+         </item>       
+         <item>
+            <ruleref uri="#MAKE_PAYMENT"/>
+            <tag>dm_root=SWI_meaning = 'MAKE_PAYMENT'</tag>
+         </item>
+        <item>
+            <ruleref uri="#PAY_ON_ANOTHER_ACCOUNT"/>
+            <tag>dm_root=SWI_meaning = 'PAY_ON_ANOTHER_ACCOUNT'</tag>
+         </item>
+        <item>
+            <ruleref uri="#MAIN_MENU"/>
+            <tag>dm_root=SWI_meaning = 'MAIN_MENU'</tag>
+         </item>
+      </one-of>
+   </rule>      
+            
+   <rule id="REPEAT">
+      <one-of>
+         	<item weight="0.01">repeat that</item>
+        	 <item>repeat</item>  
+         	<item>one</item>  
+      </one-of>
+   </rule>
+   
+   <rule id="MAKE_PAYMENT">
+      <one-of>
+         	<item>make a payment</item>
+ 	<item>make payment</item>
+         	<item weight="0.01">payment</item>
+         	<item>two</item>          
+      </one-of>
+   </rule>   
+
+   <rule id="PAY_ON_ANOTHER_ACCOUNT">
+      <one-of>
+         	<item>pay on another account</item>
+ 	<item>another account</item>        
+         	<item>pay on another</item>
+ 	<item>pay another account</item>
+ 	<item>three</item>
+      </one-of>
+   </rule>   
+
+   <rule id="MAIN_MENU">
+     <one-of>
+       	<item weight="0.001">menu</item>
+       	<item>main menu</item> 
+       	<item>start over</item>
+       	<item>four</item>
+     </one-of>
+   </rule>
+  
+</grammar>
+

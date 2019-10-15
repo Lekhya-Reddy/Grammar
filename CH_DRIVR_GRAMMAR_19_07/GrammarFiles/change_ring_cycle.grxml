@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/06/grammar    http://www.w3.org/TR/speech-grammar/grammar.xsd" xml:lang="en-us" mode="voice" root="myRoot">
+  <rule id="myRoot" scope="public">
+    <one-of>
+     <item>
+        <ruleref uri="#CHANGE_RING_CYCLE" />
+        <tag>dm_root=SWI_meaning='CHANGE_RING_CYCLE'</tag>
+      </item>     
+    </one-of>
+  </rule>
+  
+  
+  <rule id="CHANGE_RING_CYCLE">
+    <one-of>
+      <item>Change Ring Cycle</item>
+      <item>Change RingCycle</item>
+      <item>Change</item>
+    </one-of>
+  </rule>
+</grammar>

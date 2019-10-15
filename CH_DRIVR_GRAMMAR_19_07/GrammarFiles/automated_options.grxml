@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/06/grammar    http://www.w3.org/TR/speech-grammar/grammar.xsd" xml:lang="en-us" mode="voice" root="myRoot">
+  <rule id="myRoot" scope="public">
+    <one-of>
+      <item>
+        <ruleref uri="#AUTOMATED_OPTIONS" />
+        <tag>dm_root=SWI_meaning='AUTOMATED_OPTIONS'</tag>
+      </item>
+      <item weight="0.1">
+      	<ruleref uri="#noise_decoy"/>
+      	<tag>dm_root='noise_decoy';  SWI_meaning=dm_root; MEANING=SWI_meaning; SWI_decoy=1; </tag>
+      </item>   
+    </one-of>
+  </rule>
+  <rule id="AUTOMATED_OPTIONS">
+    <one-of>
+      <item>automated services</item>
+      <item>automated</item>  
+      <item>automated option</item>
+      <item>automated options</item>
+      <item>automated automated options</item>
+    </one-of>
+  </rule>
+  <rule id="noise_decoy" scope="public">
+  		<one-of>
+	    	<item>
+	      	<item repeat="1-10" repeat-prob="0.95">@reject@</item>
+	    	</item>
+  		</one-of>
+	</rule>   
+</grammar>

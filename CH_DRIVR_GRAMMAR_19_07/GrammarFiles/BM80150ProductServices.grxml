@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+ 
+  <rule id="myRoot" scope="public">
+    <one-of>
+      <item>
+        <ruleref uri="#SERVICES" />
+        <tag>dm_root=SWI_meaning='SERVICES'</tag>
+      </item>
+      <item>
+        <ruleref uri="#OTHER" />
+        <tag>dm_root=SWI_meaning='OTHER'</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="SERVICES">
+   <one-of>           
+     <item>Government Educational services</item>
+     <item>Government</item>   
+     <item>Educational</item>              
+     <item>services</item>
+     <item>one</item>
+   </one-of>
+  </rule>
+
+  <rule id="OTHER">
+   <one-of>           
+     <item>existing</item>   
+     <item>other</item>
+     <item>other options</item>
+     <item>other services</item>
+     <item>something else</item>
+     <item>two</item>
+   </one-of>
+  </rule>
+    
+</grammar>

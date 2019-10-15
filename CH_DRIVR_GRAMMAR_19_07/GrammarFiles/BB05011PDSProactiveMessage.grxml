@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0"  xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+
+   <rule id="myRoot" scope="public">
+      <one-of>
+         <item>
+	    <ruleref uri="#MAKE_PAYMENT"/>
+            <tag>dm_root= SWI_meaning = 'MAKE_PAYMENT'</tag>
+         </item>
+         <item>
+	    <ruleref uri="#ALREADY_PAID"/>
+            <tag>dm_root= SWI_meaning = 'ALREADY_PAID'</tag>
+         </item>
+
+         <item>
+	    <ruleref uri="#REPRESENTATIVE"/>
+            <tag>dm_root= SWI_meaning = 'REPRESENTATIVE'</tag>
+         </item>
+
+         <item>
+            <ruleref uri="#CALL_BACK"/>
+            <tag>dm_root=SWI_meaning = 'CALL_BACK_LATER'</tag>
+         </item>
+         
+                  
+      </one-of>
+   </rule>      
+            
+      
+   <rule id="MAKE_PAYMENT">
+      <one-of>
+         <item>make a payment</item>
+         <item>make payment</item>
+         <item weight="0.01">payment</item>
+         <item>pay my bill</item>
+         <item>pay now</item>
+      </one-of>
+   </rule>  
+   
+   <rule id="REPRESENTATIVE">
+      <one-of>
+         <item>representative</item>
+         <item>agent</item>
+		 <item weight="0.01">rep</item>
+         <item>operator</item>
+		 <item>representative please</item>
+		 <item>customer service</item>
+      </one-of>
+   </rule>  
+
+   <rule id="CALL_BACK">
+      <one-of>
+         <item>call back</item>
+		 <item weight="0.01">later</item>
+		 <item>deal with it later</item>
+         <item>call back later</item>
+      </one-of>
+   </rule>     
+
+   <rule id="ALREADY_PAID">
+      <one-of>
+         <item>already paid</item>
+         <item>I already paid</item>
+		 <item weight="0.001">i paid</item>
+		 <item>i paid it</item>
+		 <item>I paid that</item>
+		 <item>the payment has been made</item>
+		 <item>payment has been made</item>
+		 <item weight="0.001">i did</item>
+		 <item>i just did</item>
+		 <item>Ive made payment</item>
+      </one-of>
+   </rule>   
+      
+
+</grammar>
+

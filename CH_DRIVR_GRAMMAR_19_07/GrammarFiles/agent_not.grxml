@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-US" mode="voice" root="myRoot">
+
+<rule id="myRoot" scope="public">
+<ruleref uri="#decoys"/>
+<tag>SWI_decoy=1</tag>
+</rule>
+
+<rule id="decoys" scope="public">
+<one-of>
+<item>agent</item>
+<item>agen</item>
+<item>agenta</item>
+<item>agenth</item>
+<item>age</item>
+</one-of>
+</rule>
+
+</grammar>
+   
+         
+            
+         
+      

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0"  xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+
+   <rule id="myRoot" scope="public">
+      <one-of>
+	     <item>
+            <ruleref uri="#PAY_MY_BILL"/>
+            <tag>dm_root=SWI_meaning = 'PAY_MY_BILL'</tag>
+         </item>
+	     <item>
+            <ruleref uri="#REPEAT_BALANCE"/>
+            <tag>dm_root=SWI_meaning = 'REPEAT_BALANCE'</tag>
+         </item>
+         <item>
+            <ruleref uri="#MORE_DETAILS"/>
+            <tag>dm_root=SWI_meaning = 'MORE_DETAILS'</tag>
+         </item>
+		 <item>
+			 <ruleref uri="#PAYMENT_ARRANGEMENTS"/>
+            <tag>dm_root=SWI_meaning = 'PAYMENT_ARRANGEMENTS'</tag>
+         </item>
+          <item>
+            <ruleref uri="#ADDRESS"/>
+            <tag>dm_root=SWI_meaning = 'ADDRESS'</tag>
+         </item>
+		 <item>
+            <ruleref uri="#BILLING"/>
+            <tag>dm_root=SWI_meaning = 'BILLING'</tag>
+         </item>
+        </one-of>
+   </rule>      
+            
+     <rule id="PAY_MY_BILL">
+    <one-of>
+		<item>Pay Bill</item>
+		<item>Payment</item>
+		<item>Pay My Bill</item>   	
+		
+    </one-of>
+  </rule>  
+  
+   <rule id="REPEAT_BALANCE">
+       
+         <one-of>
+	        <item>repeat my balance</item>
+	        <item>repeat balance</item>
+            <item>repeat</item>
+            <item>balance</item>
+            <item>repeat that</item>
+			<item>hear my balance</item>
+			<item>hear my balance first</item>
+			<item>whats my balance</item>
+         </one-of>
+      
+   </rule>  
+ <rule id="MORE_DETAILS">
+       
+         <one-of>
+ 	    <item>more details</item>
+ 	    <item weight="0.01">more</item>
+            <item>get balance details</item>
+            <item>get details</item>
+            <item>balance details</item>
+            <item>details</item>
+            <item>balance detail</item>
+            <item weight="0.01">give more details</item>
+			<item>more more details</item>
+			<item>more details more details</item>
+			<item>more details about my balance</item>
+			<item>give more details</item>
+	        <item>more more details</item>
+		    <item>more details more details</item>
+			<item>more details about my balance</item>
+			<item>get more details</item>
+         </one-of>
+ </rule>  
+	 <rule id="ADDRESS">
+      <one-of>
+         <item>address</item>
+         <item>mailing address</item>
+         <item>payment mailing address</item>
+     </one-of>
+   </rule> 
+   
+   <rule id="BILLING">
+         <one-of>  
+            <item>bill</item>
+            <item>phone bill</item>
+            <item>billing</item>   	  
+	    <item>about my phone bill</item>	   
+		<item>my bill</item> 
+		<item>questions about the bill</item> 
+         </one-of>
+   </rule>     
+   
+ <rule id="PAYMENT_ARRANGEMENTS">
+       <one-of>            
+		<item>payment arrangements</item> 
+        </one-of>
+ </rule>
+   
+</grammar>
+

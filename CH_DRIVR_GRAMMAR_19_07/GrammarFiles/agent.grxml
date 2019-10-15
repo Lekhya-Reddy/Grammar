@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+      
+   <rule id="myRoot" scope="public">
+      <item repeat="0-1">@hes@</item>
+      <ruleref uri="#AGENT"/>
+      <tag>dm_command= SWI_meaning = 'AGENT'</tag>
+      <tag>dm_confirm_string= SWI_meaning = 'AGENT'</tag>
+      <tag>dm_confirmation_mode='IF_NECESSARY'</tag>
+   </rule>
+            
+   <rule id="AGENT">
+      <item repeat="0-1">please</item>
+      <item repeat="0-1">I need to speak to</item>
+      <item repeat="0-1">need to speak with</item>
+      <item repeat="0-1">need to talk to</item>
+      <item repeat="0-1">I need</item>
+      <item repeat="0-1">need</item>
+      <item repeat="0-1">I want to speak to</item>
+      <item repeat="0-1">I want</item>
+      <item repeat="0-1">want</item>
+      <item repeat="0-1">let me speak with</item>
+      <item repeat="0-1">let me talk to</item>
+      <item repeat="0-1">give me</item>
+      <item repeat="0-1">an</item>
+      <item repeat="0-1">a</item>
+      <one-of>
+         	<item>agent</item>	 
+	<item>associate</item>
+	<item>attendant</item>
+	<item>c s r</item>
+	<item>customer care</item>	 
+	<item>customer service rep</item>
+         	<item>customer service representative</item>
+         	<item>human</item>
+         	<item>human being</item> 	 
+         	<item>live person</item>
+	<item>operator</item>
+         	<item>person</item>
+	<item>real person</item>
+         	<item>representative</item>        
+	<item>service representative</item>
+	<item>someone</item>
+         	<item>supervisor</item>       
+	<item>technician</item>
+	<item>technical service</item>
+	<item>tech support</item>
+	<item>technical support</item>
+	
+	<item>agent agent</item>
+	<item>assistance please</item>
+	<item>can I speak to a representative</item>
+	<item>can i talk to somebody</item>
+	<item>century link representative</item>
+	<item>could i speak with a representative</item>
+	<item>could i speak with a representative please</item>
+	<item>customer customer representative</item>
+	<item>customer service </item>
+	<item>customer support</item>
+	<item>give me someone i can talk to</item>
+	<item>i just need to talk to somebody</item>
+	<item>i need to talk to somebody</item>
+	<item>I wanna speak to a customer representative</item>
+	<item>i wanna talk to someone</item>
+	<item>I want to speak to a customer representative please</item>
+	<item>i want to talk to a person</item>
+	<item>i would like to speak to a representative please</item>
+	<item>i would like to speak with a representative</item>
+	<item>i'd like to speak to a representative</item>
+	<item>may i speak to a representative</item>
+	<item>rep</item>
+	<item>rep representative</item>
+	<item>representative representative</item>
+	<item>speak speak to somebody</item>
+	<item>speak to a representative</item>
+	<item>Speak to an agent	</item>
+	<item>speak to human being</item>
+	<item>speak to representative</item>
+	<item>speak to someone</item>
+	<item>speak to the rep</item>
+	<item>speak with a representative</item>
+	<item>talk to a person</item>
+	<item>talk to an agent</item>
+	<item>talk to somebody</item>
+	<item>talk to someone</item>
+	<item>to talk to rep</item>
+	<item>wanna talk to a person</item>
+	<item>i'd like to talk to an agent</item>
+      </one-of>
+      <item repeat="0-1">please</item>
+   </rule>
+</grammar>
+

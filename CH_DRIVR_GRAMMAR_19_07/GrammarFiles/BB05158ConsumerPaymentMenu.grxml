@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0"  xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+
+   <rule id="myRoot" scope="public">
+      <one-of>
+	     <item>
+            <ruleref uri="#BALANCE"/>
+            <tag>dm_root=SWI_meaning = 'BALANCE'</tag>
+         </item>
+         <item>
+            <ruleref uri="#PAY_MY_BILL"/>
+            <tag>dm_root=SWI_meaning = 'PAY_MY_BILL'</tag>
+         </item>
+		 <item>
+	        <ruleref uri="#PAYMENT_ARRANGEMENTS"/>
+            <tag>dm_root=SWI_meaning = 'PAYMENT_ARRANGEMENTS'</tag>
+         </item>
+        </one-of>
+   </rule>      
+            
+   <rule id="BALANCE">       
+         <one-of>
+			<item>repeat my balance</item>
+			<item>repeat balance</item>
+           	<item>balance</item>
+			<item>hear my balance</item>
+			<item>hear my balance first</item>
+			<item>whats my balance</item>
+			<item>one</item>   			
+         </one-of>   
+   </rule>  
+   <rule id="PAY_MY_BILL">
+        <one-of>
+			<item>Pay Bill</item>
+			<item>Payment</item>
+			<item>Pay My Bill</item>   	
+			<item>two</item>
+        </one-of>
+   </rule>  
+  <rule id="PAYMENT_ARRANGEMENTS">
+       <one-of>            
+			<item>payment arrangements</item>
+			<item>payment options</item>
+			<item>arrangements</item> 
+			<item>three</item>
+        </one-of>
+  </rule>
+</grammar>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+ 
+  <rule id="myRoot" scope="public">
+    <one-of>
+      <item>
+        <ruleref uri="#HOME_ACCOUNT" />
+        <tag>dm_root=SWI_meaning='HOME_ACCOUNT'</tag>
+      </item>
+      <item>
+        <ruleref uri="#NEW_SERVICE" />
+        <tag>dm_root=SWI_meaning='NEW_SERVICE'</tag>
+      </item>
+      <item>
+        <ruleref uri="#OTHER" />
+        <tag>dm_root=SWI_meaning='OTHER'</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="HOME_ACCOUNT">
+   <one-of>           
+     <item>home account</item>   
+     <item>home</item>              
+     <item>one</item>
+     <item>home home account</item>
+     <item>residence</item>
+   </one-of>
+  </rule>
+
+  <rule id="NEW_SERVICE">
+   <one-of>           
+     <item>new service</item>   
+     <item>new</item>              
+     <item>service</item>
+     <item>two</item>
+     <item>products</item>
+   </one-of>
+  </rule>
+
+  <rule id="OTHER">
+   <one-of>           
+     <item>existing</item>   
+     <item>other</item>
+     <item>other options</item>
+     <item>business</item>
+     <item>three</item>
+   </one-of>
+  </rule>
+    
+</grammar>

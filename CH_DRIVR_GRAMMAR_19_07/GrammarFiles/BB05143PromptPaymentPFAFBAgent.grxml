@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+      
+   <rule id="myRoot" scope="public">
+      <ruleref uri="#AGENT"/>
+      <tag>dm_command= SWI_meaning = 'AGENT'</tag>
+      <tag>dm_confirm_string= SWI_meaning = 'AGENT'</tag>
+      <tag>dm_confirmation_mode='IF_NECESSARY'</tag>
+   </rule>
+            
+   <rule id="AGENT">
+      <one-of>
+         <item>agent</item>	 
+	 <item>operator</item>
+	 <item>c s r</item>
+         <item>human being</item> 	 
+         <item>live person</item>
+         <item>representative</item>        
+         <item>supervisor</item>       
+	 <item>i want to talk to someone</item>
+	 <item>i want to speak to someone</item>
+	 <item>customer care</item>	 
+
+
+         <item>speak to a live person</item>
+         <item>speak to a human being</item>
+         <item>speak to a representative</item>
+         <item>speak to a human</item>
+         <item>speak to a person</item>
+         <item>speak to a c s r</item>
+         <item>speak to a customer service representative</item>
+	 <item>speak to a customer service rep</item>
+	 <item>speak to an operator</item>
+	 <item>speak to an agent</item>
+	 <item>speak to a service representative</item>
+	 <item>speak with somebody</item>
+
+	 <item>talk to a live person</item>
+         <item>talk to a human being</item>
+         <item>talk to a representative</item>
+         <item>talk to a human</item>
+         <item>talk to a person</item>
+         <item>talk to a c s r</item>
+         <item>talk to a customer service representative</item>
+	 <item>talk to a customer service rep</item>
+	 <item>talk to an operator</item>
+	 <item>talk to an agent</item>
+	 <item>talk to a service representative</item>
+
+	 <item>i want to speak to a live person</item>
+         <item>i want to speak to a human being</item>
+         <item>i want to speak to a representative</item>
+         <item>i want to speak to a human</item>
+         <item>i want to speak to a person</item>
+         <item>i want to speak to a c s r</item>
+         <item>i want to speak to a customer service representative</item>
+	 <item>i want to speak to a customer service rep</item>
+	 <item>i want to speak to an operator</item>
+	 <item>i want to speak to an agent</item>
+	 <item>i want to speak to a service representative</item>
+
+	 <item>i want to talk to a live person</item>
+         <item>i want to talk to a human being</item>
+         <item>i want to talk to a representative</item>
+         <item>i want to talk to a human</item>
+         <item>i want to talk to a person</item>
+         <item>i want to talk to a c s r</item>
+         <item>i want to talk to a customer service representative</item>
+	 <item>i want to talk to a customer service rep</item>
+	 <item>i want to talk to an operator</item>
+	 <item>i want to talk to an agent</item>
+	 <item>i want to talk to a service representative</item>
+	 <item>talk to somebody</item>
+	 <item>talk to customer service</item>
+	 <item>talk to someone</item>
+	 <item>customer representative</item>
+	 
+	 <item>give me a person</item>
+	 <item>representative representative</item>
+	 <item>representative please</item>
+	 <item>speak to someone</item>
+	 <item>can I talk to a representative</item>
+	 <item>speak with a representative</item>
+	 <item>id like to speak to a representative</item>
+	 <item>i need to speak to a representative</item>
+	 <item>real person</item>
+	 <item>talk to an talk to an associate</item>
+	 <item>talk to an attendant</item>
+	 <item>talk to a real person</item>
+	 <item>service representative</item>
+	 <item>talk to customer representative please</item>
+	 
+	 <item>technical support</item>
+	 <item>technician</item>
+	 <item>technical service</item>
+	 <item>technical services</item>
+	 <item>tech support</item>
+	 <item>operator please</item>
+	 <item>i need to talk to somebody</item>
+	 <item>id like to speak to a representative</item>
+	 <item>id like to speak with someone</item>
+	 <item>may i speak to a representative please</item>
+	 <item>customer representative please</item>
+	 <item>id like to talk to an agent please</item>
+	 <item>can i speak with a customer service person</item>
+	 <item>supervisor please</item>
+	 <item>need to talk to a representative</item>
+	 <item>speak to representative</item>
+	 <item>speak to somebody please</item>
+	 <item>give me an operator</item>
+	 <item>operator please</item>
+	 <item>technical support</item>
+	 <item>id like to talk to an agent please</item>
+	 <item>can i speak with a customer service person</item>
+	 <item>customer service please</item>
+	 <item>agent agent</item>
+	 
+	 <item>can i speak to representative</item>
+	 <item>person i wanna talk to a person</item>
+	 <item>i need customer service</item>
+	 <item>i wanna talk to an agent representative</item>
+	 <item>can i talk to somebody</item>
+	 <item>live representative</item>
+	 <item>i wanna talk to a person</item>
+	 <item>person</item>
+	 <item>customer service rep</item>
+      </one-of>
+   </rule>
+</grammar>
+

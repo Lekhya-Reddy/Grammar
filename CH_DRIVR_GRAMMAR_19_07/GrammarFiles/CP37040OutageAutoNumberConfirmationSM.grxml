@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+
+   <rule id="myRoot" scope="public">
+      <one-of>       
+         <item>
+            <ruleref uri="#YES"/>
+            <tag>dm_root=SWI_meaning = 'YES'</tag>
+         </item>
+         <item>
+            <ruleref uri="#DIFFERENT_NUMBER"/>
+            <tag>dm_root=SWI_meaning = 'DIFFERENT_NUMBER'</tag>
+         </item>      
+      </one-of>
+   </rule>      
+            
+      
+   <rule id="YES">
+      <one-of>
+	 <item>yes</item>
+     <item>thats correct</item>
+     <item>that is correct</item>
+     <item>correct</item>
+     <item>thats right</item>
+     <item>that is right</item>
+     <item>thats it</item>
+     <item>right</item>
+	 <item>yeah</item>
+	 <item>correct yes</item>
+	 <item>yes yes</item>
+	 <item>yes thats right</item>
+	 <item>yes it is</item>
+	 <item>yep</item>
+	 <item>right yes</item>
+	 <item>yes sir</item>
+	 <item>yeah yes yes yes yes</item>
+	 <item>yeah yes</item>
+	 <item>a yes</item>
+	 <item>yup yes yes</item>
+	 <item>yes its correct</item>
+	 <item>yes go ahead</item>
+	 <item>yes yes yes</item>
+	 <item>si</item>
+	 <item>one</item>
+     <item>yes its the right number</item>
+	 <item>delete it yes</item>
+	 <item>delete it</item>
+	 <item>delete</item>	 
+      </one-of>
+   </rule>
+   
+   <rule id="DIFFERENT_NUMBER">
+      <one-of>
+         <item>different</item>
+		 <item>different number</item>
+		 <item>sure different number</item> 
+		 <item>okay different number</item>
+		 <item>sure different </item>
+		 <item>okay different </item>
+	 </one-of>
+   </rule>             
+   
+</grammar>
+

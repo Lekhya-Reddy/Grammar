@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0"  xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+
+   <rule id="myRoot" scope="public">
+      <one-of>
+         <item>
+	    <ruleref uri="#CARD_PAYMENT"/>
+            <tag>dm_root= SWI_meaning = 'CARD_PAYMENT'</tag>
+         </item>
+         <item>
+            <ruleref uri="#BANK_ACCOUNT"/>
+            <tag>dm_root=SWI_meaning = 'BANK_ACCOUNT'</tag>
+         </item>
+         
+      </one-of>
+   </rule>      
+            
+   <rule id="CARD_PAYMENT">           
+      <one-of>
+	<item>check card</item>
+        <item>credit card</item>
+	<item>debit card</item>
+	<item>credit</item>
+	<item>visa</item>
+	<item>visa card</item>
+	<item>master card</item>
+	<item>my credit card</item>
+	<item>debit</item>
+	<item>card</item>
+	<item weight="0.1">one</item>
+	<item>credit card credit card</item>
+	<item>credit card or debit card</item>
+	<item>credit card please</item>
+	<item>card payment</item>
+      </one-of>
+   </rule>
+   
+   <rule id="BANK_ACCOUNT">
+      <one-of>
+	<item>bank account</item>
+        <item>checking account</item>
+        <item>savings account</item>
+	<item>transfer from bank account</item>
+	<item>transfer from my bank account</item>
+	<item>transfer from my checking account</item>
+	<item>transfer from checking account</item>
+	<item>transfer</item>
+	<item>bank</item>
+	<item>account</item>
+	<item>check</item>
+	<item>checking</item>
+	<item weight="0.1">two</item>
+	<item>bank account bank account</item>
+	<item>my checking account</item>
+	<item>checking bank account</item>
+	</one-of>
+   </rule>   
+
+</grammar>
+

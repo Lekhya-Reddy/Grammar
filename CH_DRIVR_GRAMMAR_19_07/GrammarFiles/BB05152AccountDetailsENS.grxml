@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+
+   <rule id="myRoot" scope="public">
+      <one-of>
+        <item>
+            <ruleref uri="#MAKE_PAYMENT"/>
+            <tag>dm_root=SWI_meaning = 'MAKE_PAYMENT'</tag>
+         </item>
+ 	 <item>
+            <ruleref uri="#I_HAVE_A_QUESTION"/>
+            <tag>dm_root=SWI_meaning = 'I_HAVE_A_QUESTION'</tag>
+         </item>
+       
+      </one-of>
+   </rule>      
+   
+   <rule id="MAKE_PAYMENT">
+      <one-of>  
+        <item>make a payment</item>
+        <item>make payment</item>
+        <item>payment</item>
+	 	<item>im ready to pay</item>
+	 	<item>ready to pay</item>
+	 	<item>pay my bill</item>
+	  	<item>make the payment</item>
+      </one-of>
+   </rule>  
+
+	 <rule id="I_HAVE_A_QUESTION">
+      <one-of>
+	     <item>I have a question</item>
+	     <item>Ive a question</item>
+	     <item>due date</item>  
+	     <item>last payment received</item>
+         <item>question about my account</item>
+         <item>question</item>
+         <item>question about account</item>
+         <item>account t</item>
+         <item>question on my account</item>
+         <item>question question</item>
+         <item>question about my bill</item>
+         <item>questions</item>
+		 <item>question about the bill</item>
+         <item>questions about my account</item>
+      </one-of>
+   </rule>  
+
+
+</grammar>
+

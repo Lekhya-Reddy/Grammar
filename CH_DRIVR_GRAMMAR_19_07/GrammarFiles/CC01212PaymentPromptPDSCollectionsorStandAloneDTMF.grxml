@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         tag-format="swi-semantics/1.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+         http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ 		 xml:lang="en-us" mode="dtmf" root="myRoot">
+
+   <rule id="myRoot" scope="public">
+      <one-of>
+         <item>
+            <tag>dm_root= SWI_meaning = 'SOMETHING_ELSE'</tag>
+            1
+         </item>
+         
+      </one-of>
+   </rule>      
+            
+</grammar>
+

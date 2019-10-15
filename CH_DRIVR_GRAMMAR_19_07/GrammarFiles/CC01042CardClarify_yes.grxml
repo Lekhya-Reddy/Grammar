@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         tag-format="swi-semantics/1.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+         http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ 		 xml:lang="en-us" mode="voice" root="myRoot">
+
+      
+   <rule id="myRoot" scope="public">
+<one-of>
+<item>
+      <ruleref uri="#YES"/>
+      <tag>dm_root=SWI_meaning = 'yes'</tag>
+</item>
+<item>
+      <ruleref uri="#NO"/>
+      <tag>dm_root=SWI_meaning = 'no'</tag>
+</item>
+</one-of>
+   </rule>
+      
+   <rule id="YES">
+      <one-of>
+	 <item>yes</item>
+         <item>thats correct</item>
+         <item>that is correct</item>
+         <item>correct</item>
+         <item>thats right</item>
+         <item weight="0.01">that is right</item>
+         <item>thats it</item>
+         <item weight="0.01">right</item>
+	 <item weight="0.01">yeah</item>
+	 <item>correct yes</item>
+	 <item>yes yes</item>
+	 <item>yes thats right</item>
+	 <item>yes it is</item>
+	 <item>yep</item>
+	 <item>right yes</item>
+	 <item>yes sir</item>
+	 <item>yeah yes yes yes yes</item>
+	 <item>yeah yes</item>
+	 <item>a yes</item>
+	 <item>yup yes yes</item>
+	 <item>yes its correct</item>
+	 <item>yes go ahead</item>
+	 <item>yes yes yes</item>
+	 <item weight="0.01">si</item>
+	 <item>one</item>
+     <item>yes its the right number</item>
+	 <item>delete it yes</item>
+	 <item>delete it</item>
+	 <item>delete</item>	 
+	 <item>yes yes yes yes</item>
+	 <item>yes yes yes yes yes</item>
+	 <item>sure</item>
+	 <item>visa</item>
+	 <item>mastercard</item>
+	 <item>okay</item>
+      </one-of>
+   </rule>
+
+<rule id="NO">
+      <one-of>
+         <item>no</item>
+	 <item weight="0.01">nope</item>
+	 <item>no it is not</item>
+	 <item weight="0.01">wrong</item>
+	 <item>no no</item>
+	 <item>no problem</item>
+	 <item>nah no</item>
+	 <item>no no no no</item>
+	 <item>no wrong</item>
+	 <item>wrong no no</item>
+	 <item>no no no</item>
+	 <item>two</item>
+     <item>two two</item>
+	 <item weight="0.01">oh no</item>
+	 <item>no hello</item>
+	 <item>wrong number</item>
+	</one-of>
+   </rule>
+
+</grammar>
+

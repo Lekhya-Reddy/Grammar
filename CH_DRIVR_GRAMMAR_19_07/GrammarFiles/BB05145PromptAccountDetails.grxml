@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+
+   <rule id="myRoot" scope="public">
+      <one-of>
+	     <item>
+            <ruleref uri="#PAY_MY_BILL"/>
+            <tag>dm_root=SWI_meaning = 'PAY_MY_BILL'</tag>
+		 </item>
+	     <item>
+            <ruleref uri="#REPEAT_MY_BALANCE"/>
+            <tag>dm_root=SWI_meaning = 'REPEAT_MY_BALANCE'</tag>
+         </item>
+         <item>
+            <ruleref uri="#MORE_DETAILS"/>
+            <tag>dm_root=SWI_meaning = 'MORE_DETAILS'</tag>
+         </item>
+        
+        </one-of>
+   </rule>      
+            
+     
+
+   <rule id="PAY_MY_BILL">
+      <one-of>
+            <item><tag>SWI_scoreDelta='+800'</tag>continue</item>
+            <item><tag>SWI_scoreDelta='+800'</tag>id like to make a payment</item>
+            <item><tag>SWI_scoreDelta='+800'</tag>make a payment</item>           
+            <item><tag>SWI_scoreDelta='+800'</tag>pay the bill</item>
+            <item><tag>SWI_scoreDelta='+800'</tag>pay a bill</item>
+            <item><tag>SWI_scoreDelta='+800'</tag>ready to pay</item>
+            <item><tag>SWI_scoreDelta='+800'</tag>pay bill</item>     
+            <item><tag>SWI_scoreDelta='+800'</tag>pay my bill</item>     
+            <item weight="0.1"><tag>SWI_scoreDelta='+800'</tag>yes</item>     
+           <item weight="0.01"><tag>SWI_scoreDelta='+800'</tag>pay</item>
+		   <item weight="0.1"><tag>SWI_scoreDelta='+800'</tag>payment</item>		
+		   <item><tag>SWI_scoreDelta='+800'</tag>my bill</item>		
+		   <item><tag>SWI_scoreDelta='+800'</tag>pay my balance</item>		
+
+      </one-of>
+   </rule>
+
+
+	 
+  
+   <rule id="REPEAT_MY_BALANCE">
+       
+         <one-of>
+	        <item>repeat my balance</item>
+	        <item>repeat balance</item>
+            <item>repeat</item>
+            <item>balance</item>
+            <item>repeat that</item>
+         </one-of>
+      
+   </rule>  
+ <rule id="MORE_DETAILS">
+       
+         <one-of>
+ 	    <item>more details</item>
+ 	    <item weight="0.01">more</item>
+            <item>get balance details</item>
+            <item>get details</item>
+            <item>balance details</item>
+            <item>details</item>
+            <item>balance detail</item>
+            <item weight="0.01">give more details</item>
+			<item>more more details</item>
+			<item>more details more details</item>
+			<item>more details about my balance</item>
+			<item>give more details</item>
+	        <item>more more details</item>
+		    <item>more details more details</item>
+			<item>more details about my balance</item>
+			<item>get more details</item>
+			<item>bill detail</item>
+			<item>hear more details</item>
+			<item>three</item>
+         </one-of>
+ </rule>  
+	
+   
+</grammar>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<grammar version="1.0" tag-format="swi-semantics/1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-us" mode="voice" root="myRoot">
+ 
+  <rule id="myRoot" scope="public">
+    <one-of>
+      <item>
+        <ruleref uri="#TELEPHONE" />
+        <tag>dm_root=SWI_meaning='TELEPHONE'</tag>
+      </item>
+      <item>
+        <ruleref uri="#ACCOUNT"/>
+        <tag>dm_root=SWI_meaning = 'ACCOUNT'</tag>
+      </item>
+      <item>
+        <ruleref uri="#TICKET"/>
+        <tag>dm_root=SWI_meaning = 'TICKET'</tag>
+      </item>
+      <item>
+        <ruleref uri="#CASE"/>
+        <tag>dm_root=SWI_meaning = 'CASE'</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="TELEPHONE">
+    <one-of>
+      <item>telephone</item>
+      <item>telephone number</item>
+      <item>local telephone number</item>
+      <item>local century link telephone number</item>
+      <item>one</item>
+    </one-of>
+  </rule>
+
+  <rule id="ACCOUNT">
+   <one-of>           
+      <item>account</item>
+      <item>account number</item>
+      <item>century link account number</item>
+      <item>two</item>
+   </one-of>
+  </rule>
+  <rule id="TICKET">
+   <one-of>           
+      <item>ticket</item>
+      <item>ticket number</item>
+      <item>century link ticket number</item>
+      <item>three</item>
+   </one-of>
+  </rule>
+   <rule id="CASE">
+   <one-of>           
+      <item>case</item>
+      <item>case number</item>
+      <item>century link case number</item>
+      <item>four</item>
+   </one-of>
+  </rule>
+    
+</grammar>
